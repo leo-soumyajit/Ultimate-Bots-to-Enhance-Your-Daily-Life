@@ -1,0 +1,5 @@
+Please provide a concise summary of the following text:
+
+{inputContent}
+
+Make sure the summary is brief, clear, and captures the main points accurately. Additionally, offer a few suggestions or recommendations based on the content.

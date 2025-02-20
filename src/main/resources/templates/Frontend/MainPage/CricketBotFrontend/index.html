@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket Bot</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <!-- Theme Toggle Button Inside Container -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+        <label for="theme-toggle" id="theme-icon">🌞</label>
+    </div>
+
+    <!-- Title -->
+    <h1>Cricket Bot</h1>
+
+    <!-- Input Field -->
+    <div class="input-field">
+        <textarea id="inputTextCricket" placeholder="Ask a cricket-related question"></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <button id="cricketBtn" onclick="getCricketResponse()">Get Response</button>
+    <button id="liveUpdatesBtn" onclick="getLiveUpdates()">Get Live Updates</button>
+
+    <!-- Loading Indicator -->
+    <div id="loadingCricket" class="loading">
+        <div class="spinner"></div>
+        <span>Processing, please wait...</span>
+    </div>
+
+    <!-- Response Container -->
+    <div id="summaryContainerCricket" class="summary-container">
+        <h2>Response</h2>
+        <div id="summaryTextCricket" class="summary-text"></div>
+    </div>
+</div>
+
+<hr class="custom-hr">
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2025 Soumyajit Banerjee. All rights reserved.</p>
+</footer>
+<!-- JavaScript File -->
+<script src="script.js"></script>
+</body>
+</html>

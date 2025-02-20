@@ -1,0 +1,248 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+/* Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Light Mode */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --input-bg-color: #f0f0f0;
+    --button-bg-color: #007bff;
+    --button-text-color: #ffffff;
+    --gradient-start: #ff0080;
+    --gradient-end: #7928ca;
+    /* Existing variables... */
+    --hr-color: #cccccc; /* Light gray for the line */
+}
+
+/* Variables for Dark Mode */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --input-bg-color: #1e1e1e;
+    --button-bg-color: #1a73e8;
+    --button-text-color: #ffffff;
+    --gradient-start: #ff79c6; /* Adjusted for dark mode */
+    --gradient-end: #bd93f9;
+    --hr-color: rgba(255, 255, 255, 0.4); /* Adjusted for dark mode */
+}
+
+/* Body Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Dark Mode Toggle */
+.toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.toggle-container input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-container label {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#theme-icon {
+    font-size: 24px;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    white-space: nowrap;
+}
+
+/* Input Field */
+.input-field {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+textarea::placeholder {
+    color: #888;
+}
+
+/* Summarize Button */
+#summarizeBtn {
+    padding: 15px 30px;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#summarizeBtn:hover {
+    background-color: #0056b3; /* Adjusted hover color */
+    transform: scale(1.05);
+}
+
+#summarizeBtn:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Loading Indicator */
+.loading {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid rgba(0, 123, 255, 0.3);
+    border-top: 4px solid var(--button-bg-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Summary Container */
+.summary-container {
+    display: none;
+    margin-top: 30px;
+    background-color: var(--input-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: background-color 0.3s;
+    font-weight: normal; /* Ensure normal font weight */
+}
+
+/* Summary Container Heading */
+.summary-container h2 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: var(--text-color);
+    font-weight: 500; /* Reduced boldness */
+}
+
+/* Summary Text */
+#summaryText,
+.summary-text {
+    font-size: 0.8em;
+    color: var(--text-color);
+    font-weight: normal !important; /* Explicitly set to normal */
+    line-height: 1.6;
+    white-space: pre-wrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #summarizeBtn {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .toggle-container {
+        justify-content: center;
+    }
+}
+/* Input Field */
+.input-field {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+
+    /* Add box shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust box shadow on focus */
+textarea:focus {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+/* Footer Styling */
+.footer {
+    margin-top: 40px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.7em;
+    color: var(--secondary-text-color);
+    background-color: transparent;
+}
+
+body.dark-mode .footer {
+    color: rgba(255, 255, 255, 0.7);
+}
+.custom-hr {
+    border: none;
+    height: 1px;
+    background-color: var(--hr-color);
+    margin: 40px 0;
+    opacity: 0.6;
+}
+
+body.dark-mode .custom-hr {
+    opacity: 1;
+}

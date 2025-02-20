@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Summarize Bot</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Container -->
+<div class="container">
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-container">
+        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+        <label for="theme-toggle">
+            <span id="theme-icon">🌞</span>
+        </label>
+    </div>
+    <!-- Title with Gradient Text -->
+    <h1>Text Summarize Bot</h1>
+    <!-- Input Field -->
+    <div class="input-field">
+        <textarea id="inputText" placeholder="Enter the text you want to summarize"></textarea>
+    </div>
+    <!-- Summarize Button -->
+    <button id="summarizeBtn" onclick="summarizeText()">Summarize</button>
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <span>Summarizing, please wait...</span>
+    </div>
+    <!-- Summary Container -->
+    <div id="summaryContainer" class="summary-container">
+        <h2>Summary</h2>
+        <div id="summaryText" class="summary-text"></div>
+    </div>
+</div>
+<!-- JavaScript File -->
+<script src="script.js"></script>
+</body>
+<!-- Footer -->
+<hr class="custom-hr">
+<footer class="footer">
+    <p>© 2025 Soumyajit Banerjee. All rights reserved.</p>
+</footer>
+
+</html>
