@@ -23,4 +23,4 @@ Follow these steps to set up the project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/ultimate-bots.git
+   [git clone :- https://github.com/leo-soumyajit/Ultimate-Bots-to-Enhance-Your-Daily-Life.git]
